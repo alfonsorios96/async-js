@@ -12,10 +12,15 @@ const promise3 = (string) => new Promise(resolve => {
     resolve(string + string);
 });
 
-const makeRequest = () =>
-    promise1()
-        .then(value1 => promise2(value1)
-            .then(value2 => promise3(value2)));
+const makeRequest = () => {
+    return promise1()
+        .then(value1 => {
+            return promise2(value1)
+                .then(value2 => {
+                    return promise3(value2);
+                });
+        });
+};
 
 /**
  *

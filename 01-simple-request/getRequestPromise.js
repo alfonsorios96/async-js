@@ -6,8 +6,10 @@ const getJSON = () => {
     });
 };
 
+// resolve => then , reject => catch
+
 const makeRequest = () =>
-    getJSON()
-        .then(data => data);
+getJSON()
+    .then(data => data);
 
 module.exports = makeRequest;

@@ -2,6 +2,7 @@
 
 
 const colors = require('colors');
+
 const example01 = require('./01-simple-request');
 const example02 = require('./02-handling-error');
 const example03 = require('./03-conditional-request');

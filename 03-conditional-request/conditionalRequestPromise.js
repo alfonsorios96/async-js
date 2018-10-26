@@ -1,22 +1,30 @@
 'use strict';
 
-const getJSON = () => new Promise(resolve => {
-    resolve({
-        needsAnotherRequest: true
-    });
+const getUsers = () => new Promise(resolve => {
+    resolve([
+        {
+            username: 'hola'
+        },
+        {
+            username: '2'
+        },
+        {
+            username: '3'
+        }]);
 });
 
-const makeAnotherRequest = (data) => new Promise(resolve => resolve(data));
+const getUser = (username) => new Promise(resolve => resolve(username));
 
-const makeRequest = () =>
-    getJSON()
-        .then(data => {
-            if (data.needsAnotherRequest) {
-                return makeAnotherRequest(data)
-                    .then(moreData => moreData);
+const makeRequest = () => {
+    return getUsers()
+        .then(users => {
+            if (users.length === 3) {
+                return getUser(users[0].username)
+                    .then(username => username);
             } else {
-                return data;
+                return users;
             }
         });
+};
 
 module.exports = makeRequest;

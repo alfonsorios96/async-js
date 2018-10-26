@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/alfonsorios96/async-js#readme",
   "dependencies": {
-    "colors": "^1.3.2"
+    "colors": "1.3.2"
   }
 }
