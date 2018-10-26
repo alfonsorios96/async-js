@@ -1,0 +1,24 @@
+{
+  "name": "async-examples",
+  "version": "1.0.0",
+  "description": "Javascript examples async functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": "git+https://github.com/alfonsorios96/async-js.git",
+  "keywords": [
+    "js",
+    "promises",
+    "async-await"
+  ],
+  "author": "Alfonso Rios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alfonsorios96/async-js/issues"
+  },
+  "homepage": "https://github.com/alfonsorios96/async-js#readme",
+  "dependencies": {
+    "colors": "^1.3.2"
+  }
+}
