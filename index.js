@@ -53,3 +53,8 @@ example04.intermediateValuesAsync()
         console.log(colors.cyan('Async/Await output: '));
         console.log(colors.green(response));
     });
+
+(async () => {
+    const data1 = await example04.intermediateValuesAsync();
+    console.log(colors.green(data1));
+})();
